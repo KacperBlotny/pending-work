@@ -28,7 +28,15 @@ using namespace std;
         switch(x)
         {
             case 1: cin >> a >> b;
-                    cout << a+b <<endl;
+                    cout << a+b <<endl; break;
+                    
+            case 2: cin >> a >> b;
+                    cout << a-b <<endl; break;
+                    
+            case 3: cin >> a >> b;
+                    cout << a*b <<endl; break;
+                
+            case 4: cin 
 
 
 
