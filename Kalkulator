@@ -1,0 +1,47 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+    int main()
+
+{
+    int a, b, c, x, y;
+
+
+    cout << "\n\nKALKULATOR" <<endl;
+
+        cout << "1 - dodawanie" <<endl;
+        cout << "2 - odejmowanie" <<endl;
+        cout << "3 - mnozenie" <<endl;
+        cout << "4 - dzielenie" <<endl;
+        cout << "5 - procent" <<endl;
+        cout << "6 - pierwiastek(2st)" <<endl;
+        cout << "7 - VAT" <<endl;
+
+    while(x!=0)
+    {
+        cin >> x;
+
+        if (x==0) break;
+
+        switch(x)
+        {
+            case 1: cin >> a >> b;
+                    cout << a+b <<endl;
+
+
+
+
+
+        }
+    }
+
+
+
+
+
+
+
+return 0;
+}
