@@ -5,17 +5,24 @@ using namespace std;
 //ZADANIE 1
 long double pot(int o, int p);      // 1 potegowanie
 void pelnoletnosc(int u);           // 2 czuy uzytkownik jest pelnletni
-long double fib(int f);        // 3
-        // 4
-        // 5
+long double fib(int f);             // 3 do ktorego wyrazu chceszz wyswietlic ciag fib
+void parz(int g);                   // 4 sprawdz czy liczba jest parzysta
+bool liczb_pierwsza(int c);         // 5 sprawdz czy liczba jest pierwsza
 
-void n_dzielnik_d(int n, int d); //ZADANIE 2
-int suma_cyfr(int a); //ZADANIE 3
+//ZADANIE 2
+void n_dzielnik_d(int n, int d);
+//ZADANIE 3
+int suma_cyfr(int a);
 //ZADANIE 4
+
+int pierwsza(int j);    //1
+int druga(int k);    //2
+float trzecia(int l);    //3
 
 int main()
 {
 
+//________________________________________________________________________________________________________________
 // ZADANIE 1
 //1
 /*
@@ -32,11 +39,35 @@ pelnoletnosc(u);
 */
 
 //3
+/*
 int f;
 cout << "Podaj do ktorego wyrazu chcesz wyswietlic ciag fibonacciego: ";
 cin >> f;
 cout << fib(f);
+*/
 
+//4
+/*
+int g;
+cout << "Podaj liczbe by sprawdzic czy jest parzysta: ";
+cin >> g;
+parz(g);
+*/
+
+//5
+/*
+int c;
+cout << "Podaj liczbe by sprawdzic czy jest liczba pierwsza: ";
+cin >> c;
+
+if(liczb_pierwsza(c))
+		cout << "Liczba " << c << " jest pierwsza" <<endl;
+	else
+		cout << "Liczba " << c << " nie jest pierwsza" <<endl;
+*/
+
+
+//________________________________________________________________________________________________________________
 /* // ZADANIE 2
     int n, d;
     cout << "Podaj liczbe: ";
@@ -48,14 +79,29 @@ cout << fib(f);
 
 
 
+
+
+//________________________________________________________________________________________________________________
 /* // ZADANIE 3
     int a;
     cin >> a;
     cout << suma_cyfr(a);
 */
 
-    return 0;
+
+
+
+//________________________________________________________________________________________________________________
+   // ZADANIE 4
+int j;
+cin >> j;
+//cout << pierwsza(j);
+cout << druga(pierwsza(j));
+if(druga(pierwsza(j))%2 != 0) cout << trzecia((druga(pierwsza(j))));
+
+  return 0;
 }
+
 //________________________________________________________________________________________________________________
 //________________________________________________________________________________________________________________
 //________________________________________________________________________________________________________________
@@ -79,7 +125,7 @@ long double pot(int o, int p)
     return pomocnicza;
 }
 
-
+//________________________________________________________________________________________________________________
 //2
 
 void pelnoletnosc(int u)
@@ -88,7 +134,7 @@ void pelnoletnosc(int u)
         else cout << "Uzytkonik nie jest pelnoletni.";
 }
 
-
+//________________________________________________________________________________________________________________
 //3
 
 long double fib(int f)
@@ -107,14 +153,29 @@ long double fib(int f)
 }
 
 
-
+//________________________________________________________________________________________________________________
 //4
 
+void parz(int g)
+{
+    if(g%2==0) cout << g << " jest liczba parzysta.";
+        else cout << g << " nie jest parzysta.";
+}
 
-
-
+//________________________________________________________________________________________________________________
 //5
 
+bool liczb_pierwsza(int c)
+{
+   if(c<2)
+        return false;
+
+   for(int i=2; i*i<=c; i++)
+        if(c%i==0)
+            return false;
+
+    return true;
+}
 
 
 
@@ -128,6 +189,7 @@ void n_dzielnik_d(int n, int d)
     if(n%d==0) cout << d << " jest dzielnikiem " << n <<endl;
         else cout << d <<" nie jest dzielnikiem " << n <<endl;
 }
+
 //________________________________________________________________________________________________________________
 //________________________________________________________________________________________________________________
 //________________________________________________________________________________________________________________
@@ -152,11 +214,26 @@ return wynik;
 //________________________________________________________________________________________________________________
 // ZADANIE 4
 
+//1
 
+int pierwsza(int j)
+{
+    if(j%2==0)
+    return j;
+}
 
+//2
 
+int druga(int g)
+{
+    g=g*3;
+}
 
-
+//3
+float trzecia(int l)
+{
+    return l*0.4;
+}
 
 
 
