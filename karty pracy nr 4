@@ -1,0 +1,155 @@
+#include <iostream>
+
+using namespace std;
+
+//ZADANIE 1
+long double pot(int o, int p);       // 1
+        // 2
+        // 3
+        // 4
+        // 5
+
+void n_dzielnik_d(int n, int d); //ZADANIE 2
+int suma_cyfr(int a); //ZADANIE 3
+//ZADANIE 4
+
+int main()
+{
+    
+// ZADANIE 1
+//1
+int o, p;
+cin >> o >> p;
+cout << pot(o,p);
+
+//2
+int y, u;
+cin >> y >> u;
+cout << potmin(y,u);
+
+
+/* // ZADANIE 2
+    int n, d;
+    cout << "Podaj liczbe: ";
+     cin >> n;
+    cout << "Podaj dzielnik ktory chcesz sprawdzic: ";
+     cin >> d;
+    n_dzielnik_d(n,d);
+*/
+
+
+
+/* // ZADANIE 3
+    int a;
+    cin >> a;
+    cout << suma_cyfr(a);
+*/
+
+    return 0;
+}
+//________________________________________________________________________________________________________________
+// ZADANIE 
+
+//1
+
+long double pot(int o, int p)
+{
+    long double pomocnicza = 1;
+    if(p != 0);
+   {
+    for(int i=0; i<p; i++)
+    {
+        pomocnicza = pomocnicza * o;
+    }
+
+   }
+    return pomocnicza;
+}
+
+//2
+
+int potmin(int y, int u)
+{
+    float pomocnicza = 1;
+    if( u != 0 )
+    {
+        for(int i=0; i<u; i++)
+        {
+            pomocnicza = pomocnicza * y;
+            
+            return pomocnicza;
+        }
+        
+        if(u<0)
+        {
+            for(int i=0; i<u; i++)
+            {
+                pomocnicza = pomocnicza * y;
+            }
+            return 1/pomocnicza;
+            
+        }
+        
+    }
+}
+
+
+
+
+
+
+//3
+
+
+
+
+//4
+
+
+
+
+//5
+
+
+
+//________________________________________________________________________________________________________________
+// ZADANIE 2
+
+void n_dzielnik_d(int n, int d)
+{
+    if(n%d==0) cout << d << " jest dzielnikiem " << n <<endl;
+        else cout << d <<" nie jest dzielnikiem " << n <<endl;
+}
+
+//________________________________________________________________________________________________________________
+// ZADANIE 3
+
+int suma_cyfr(int a)
+{
+    int wynik=0;
+
+    do
+    {
+    wynik=wynik+a%10;
+    a=a/10;
+    }
+    while(a!=0);
+
+return wynik;
+}
+
+//________________________________________________________________________________________________________________
+// ZADANIE 4
+
+
+
+
+
+
+
+
+
+
+
+
+
