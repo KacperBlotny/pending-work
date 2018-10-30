@@ -11,93 +11,169 @@ bool liczb_pierwsza(int c);         // 5 sprawdz czy liczba jest pierwsza
 
 //ZADANIE 2
 void n_dzielnik_d(int n, int d);
+
 //ZADANIE 3
 int suma_cyfr(int a);
+
 //ZADANIE 4
 
-int pierwsza(int j);    //1
-int druga(int k);    //2
+int pierwsza(int j);     //1
+int druga(int k);        //2
 float trzecia(int l);    //3
 
 int main()
 {
 
-//________________________________________________________________________________________________________________
-// ZADANIE 1
-//1
-/*
-int o, p;
-cin >> o >> p;
-cout << pot(o,p);
-*/
+cout << "Oto karta pracy numer 4 " <<endl <<endl;
+cout << "Wybierz do ktorego zadania chcesz przejsc: ";
 
-//2
-/*
-int u;
-cin >> u;
-pelnoletnosc(u);
-*/
+ int x;
 
-//3
-/*
-int f;
-cout << "Podaj do ktorego wyrazu chcesz wyswietlic ciag fibonacciego: ";
-cin >> f;
-cout << fib(f);
-*/
+while(x != 0)
+{ //poczatek while
 
-//4
-/*
-int g;
-cout << "Podaj liczbe by sprawdzic czy jest parzysta: ";
-cin >> g;
-parz(g);
-*/
+    cin >> x;
 
-//5
-/*
-int c;
-cout << "Podaj liczbe by sprawdzic czy jest liczba pierwsza: ";
-cin >> c;
+    switch(x)
+    {       //poczatek switcha nr1
 
-if(liczb_pierwsza(c))
-		cout << "Liczba " << c << " jest pierwsza" <<endl;
-	else
-		cout << "Liczba " << c << " nie jest pierwsza" <<endl;
-*/
+
 
 
 //________________________________________________________________________________________________________________
-/* // ZADANIE 2
+
+    case 1: cout << "ZADANIE 1" <<endl;
+
+        cout << "1 - Potegowanie" <<endl;
+        cout << "2 - Czy uzytkownik jest pelnoletni" <<endl;
+        cout << "3 - Wyswietl ciag Fibonacciego do podanego wyrazu" <<endl;
+        cout << "4 - Sprawdz czy liczba jest parzysta" <<endl;
+        cout << "5 - Sprawdz czy liczba jest pierwsza" <<endl <<endl;
+
+                    while(x != 0)
+            { //poczatek while nr2
+
+                        int y;
+
+                        cin >> y;
+
+                        switch(y)
+                    { //poczatek switcha nr2
+
+
+                    //1
+                        case 1: cout << "Podpunkt 1 " <<endl;
+
+                    int o, p;
+                    cin >> o >> p;
+                    cout << pot(o,p);
+
+                    break;
+
+
+                    //2
+                        case 2: cout << "Podpunkt 2 " <<endl;
+
+
+                    int u;
+                    cin >> u;
+                    pelnoletnosc(u);
+
+                    break;
+
+                    //3
+                        case 3: cout << "Podpunkt 3 " <<endl;
+
+                    int f;
+                    cout << "Podaj do ktorego wyrazu chcesz wyswietlic ciag fibonacciego: ";
+                    cin >> f;
+                    cout << fib(f);
+
+                    break;
+
+
+                    //4
+                        case 4: cout << "Podpunkt 4 " <<endl;
+
+                    int g;
+                    cout << "Podaj liczbe by sprawdzic czy jest parzysta: ";
+                    cin >> g;
+                    parz(g);
+
+                    break;
+
+
+                    //5
+                        case 5: cout << "Popunkt 5 " <<endl;
+
+                    int c;
+                    cout << "Podaj liczbe by sprawdzic czy jest liczba pierwsza: ";
+                    cin >> c;
+
+                    if(liczb_pierwsza(c))
+                            cout << "Liczba " << c << " jest pierwsza" <<endl;
+                        else
+                            cout << "Liczba " << c << " nie jest pierwsza" <<endl;
+
+                            break;
+
+                            default: cout << "ERROR" <<endl; break;
+
+                    } //koniec switcha nr2
+                } //koniec while nr2
+
+//________________________________________________________________________________________________________________
+
+    case 2: cout << "ZADANIE 2" <<endl;
+
+ // ZADANIE 2
     int n, d;
     cout << "Podaj liczbe: ";
      cin >> n;
     cout << "Podaj dzielnik ktory chcesz sprawdzic: ";
      cin >> d;
     n_dzielnik_d(n,d);
-*/
 
-
-
+    break;
 
 
 //________________________________________________________________________________________________________________
-/* // ZADANIE 3
+
+case 3: cout << "ZADANIE 3" <<endl;
+
     int a;
+
+    cout << "Podaj liczbe a program zsumuje jej cyfry: ";
+
     cin >> a;
     cout << suma_cyfr(a);
-*/
 
+    break;
 
 
 
 //________________________________________________________________________________________________________________
-   // ZADANIE 4
+
+   case 4: cout << "ZADANIE 4" <<endl;
+
 int j;
+
+cout << "Podaj liczbe by zastosowac ja do polecenia zadania 4: ";
+
 cin >> j;
-//cout << pierwsza(j);
-cout << druga(pierwsza(j));
-if(druga(pierwsza(j))%2 != 0) cout << trzecia((druga(pierwsza(j))));
+
+
+if(pierwsza(j)%2 == 0) cout << druga(pierwsza(j));
+    else if(pierwsza(j)%2 != 0) cout << trzecia(j);
+
+    break;
+
+//________________________________________________________________________________________________________________
+
+    default: cout << "ERROR" <<endl; break;
+
+    }   //koniech switcha nr 1
+} //while
 
   return 0;
 }
@@ -106,6 +182,7 @@ if(druga(pierwsza(j))%2 != 0) cout << trzecia((druga(pierwsza(j))));
 //________________________________________________________________________________________________________________
 //________________________________________________________________________________________________________________
 //________________________________________________________________________________________________________________
+
 //________________________________________________________________________________________________________________
 // ZADANIE 1
 
@@ -214,6 +291,7 @@ return wynik;
 //________________________________________________________________________________________________________________
 // ZADANIE 4
 
+
 //1
 
 int pierwsza(int j)
@@ -226,7 +304,7 @@ int pierwsza(int j)
 
 int druga(int g)
 {
-    g=g*3;
+    return g=g*3;
 }
 
 //3
@@ -234,10 +312,3 @@ float trzecia(int l)
 {
     return l*0.4;
 }
-
-
-
-
-
-
-
